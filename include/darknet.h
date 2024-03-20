@@ -1014,6 +1014,7 @@ typedef struct box_label {
 //} list;
 // -----------------------------------------------------
 
+LIB_API network *init_network(char* cfg, char* weights);
 
 // parser.c
 LIB_API network *load_network(char *cfg, char *weights, int clear);
