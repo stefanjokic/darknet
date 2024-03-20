@@ -1779,8 +1779,7 @@ network* init_network(char* cfg, char* weights)
     if (weights) {
         load_weights(net, weights);
     }
-    if (*net.letter_box) letter_box = 1;
-    *net.benchmark_layers = 0;
+    (*net)->benchmark_layers = 0;
     fuse_conv_batchnorm(*net);
     calculate_binary_weights(*net);
 
